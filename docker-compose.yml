@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+
+  frontend:
+    env_file:
+      - .env
+    image: nginx-proxy
+    build:
+      context: .
+      dockerfile: deploy/app/Dockerfile
+    networks:
+      - demo
+    ports:
+      - "80:80"
+
+  backend:
+    image: django-backend
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    networks:
+      - demo
+
+networks:
+  demo:
