@@ -23,7 +23,7 @@ $ docker-compose up
 Tambien puedes usae el siguiente comando si tiene **swarm** instalado.
 
 ```
-$ docker stack deploy docker_coreui -c .\docker-compose.yml
+$ docker stack deploy docker_coreui -c docker-compose.yml
 ```
 
 ## Construido con 🛠️
